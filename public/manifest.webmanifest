@@ -1,0 +1,47 @@
+{
+  "short_name": "rebelsmuggling",
+  "name": "Food and Foodservice Supply Warehouse.",
+  "description": "Food and Foodservice Supply Warehouse.",
+  "icons": [
+    {
+      "src": "/favicons/196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/favicons/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicons/180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/favicons/128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/favicons/96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/favicons/76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/favicons/32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ad121a",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ad121a"
+}

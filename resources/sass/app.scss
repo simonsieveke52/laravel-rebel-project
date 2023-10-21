@@ -1,0 +1,620 @@
+// Variables
+@import 'variables';
+
+// Fontawsome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import 'fonts';
+
+// Partials
+@import 'partials/rating';
+@import 'partials/header';
+@import 'partials/navigation';
+@import 'partials/footer';
+@import 'partials/home';
+@import 'partials/product';
+@import 'partials/category';
+@import 'partials/cart';
+@import 'partials/checkout';
+@import 'partials/global';
+@import 'partials/form';
+
+body, html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-display: swap;
+}
+
+html {
+	min-width: 308px;
+    scroll-behavior: smooth;
+}
+
+*, .fa, .fas {
+    font-display: swap;
+}
+
+.text-hover-danger {
+    transition: color 0.5s;
+    &:hover {
+        transition: color 0.5s;
+        color: $red !important;
+    }
+}
+
+.link--add-to-favorites {
+    color: $body-color;
+    cursor: pointer;
+    font-size: 1.35rem;
+    transition: color 0.5s;
+    &:hover {
+        transition: color 0.5s;
+        color: $pink;
+    }
+}
+
+.pagination {
+
+	.page-link:focus {
+	    box-shadow: none;
+	}
+
+	.page-link:hover {
+        color: $highlight;
+	    background-color: #fff;
+	    border: 1px solid $highlight;
+
+		@include media-breakpoint-only(sm) {
+	        color: $highlight;
+		    background-color: #fff;
+		    border: 1px solid $highlight;
+		}
+
+		@include media-breakpoint-up(md) {
+            color: #fff;
+		    background-color: $highlight;
+		    border-color: $highlight;
+		}
+	}
+
+	.page-item.active .page-link {
+	    z-index: 3;
+	    color: #fff;
+	    background-color: $highlight;
+	    border-color: $highlight;
+	}
+}
+
+.image--gallery--active {
+	max-height: 250px;
+	@include media-breakpoint-up(sm) {
+		max-height: 300px;
+	}
+}
+
+.modal-backdrop {
+	width: 100%;
+	height: 100%;
+}
+
+.select2-container--default .select2-selection--single {
+	border-color: #ced4da;
+	height: 34px;
+
+	.select2-selection__arrow {
+		height: 32px;
+	}
+
+	.select2-selection__rendered {
+		line-height: 32px;
+	}
+}
+
+.fixed-sm-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+
+    @include media-breakpoint-only(sm) {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    @include media-breakpoint-up(md) {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: auto;
+    }
+}
+.fixed-sm-top {
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+
+	@include media-breakpoint-only(sm) {
+		position: fixed;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    z-index: 1030;
+	}
+
+	@include media-breakpoint-up(md) {
+		position: relative;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    z-index: auto;
+	}
+}
+
+span.select2.select2-container.select2-container--default {
+	width: 100% !important;
+}
+
+.font-open-sans {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.form-control {
+	&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	  color: #c6c9cc;
+	  opacity: 1; /* Firefox */
+	}
+
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	  color: #c6c9cc;
+	}
+
+	&::-ms-input-placeholder { /* Microsoft Edge */
+	  color: #c6c9cc;
+	}
+}
+
+#main-navbar.offcanvas-collapse {
+	z-index: 9999;
+	position: fixed;
+	opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #fafafa;
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform 0.15s ease-in-out;
+    transition: opacity 0.15s, transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+
+    &.open {
+	    -webkit-transform: translateX(0);
+	    transform: translateX(0);
+	    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+	    opacity: 1;
+	}
+
+	@include media-breakpoint-up(md) {
+		opacity: 1;
+		z-index: inherit;
+		position: inherit;
+	    top: inherit;
+	    bottom: inherit;
+	    right: inherit;
+	    width: inherit;
+	    overflow-y: inherit;
+	    background-color: inherit;
+	    transform: inherit;
+
+	    &.open {
+		    box-shadow: unset !important;
+		}
+	}
+
+	@include media-breakpoint-only(sm) {
+	    width: 83%;
+	    &.open {
+		    -webkit-transform: translateX(-21%);
+		    transform: translateX(-21%);
+		    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+		    opacity: 1;
+		}
+	}
+}
+
+.top-header {
+
+	height: 63px;
+
+	@include media-breakpoint-up(sm) {
+		min-height: 150px;
+		margin-bottom: -60px;
+	}
+
+    .top-logo {
+
+	    max-width: 90px;
+	    z-index: 2;
+
+	    @include media-breakpoint-only(xl) {
+    		margin-bottom: -64px;
+	    	margin-top: -28px;
+	    	z-index: 100;
+	    	max-width: none;
+    	}
+
+    	@include media-breakpoint-only(lg) {
+    		margin-bottom: -64px;
+	    	margin-top: -28px;
+	    	z-index: 100;
+	    	max-width: none;
+    	}
+
+    	@include media-breakpoint-only(md) {
+    		margin-bottom: -64px;
+	    	margin-top: -28px;
+	    	z-index: 100;
+	    	max-width: none;
+    	}
+
+    	@include media-breakpoint-only(sm) {
+    		margin-bottom: -64px;
+	    	margin-top: -28px;
+	    	z-index: 100;
+	    	max-width: none;
+    	}
+    }
+
+	.top-text-logo {
+
+		@include media-breakpoint-only(sm) {
+    		height: 150px;
+    	}
+    	@include media-breakpoint-only(md) {
+    		height: 150px;
+    	}
+    	@include media-breakpoint-only(lg) {
+    		height: 150px;
+    	}
+    	@include media-breakpoint-only(xl) {
+    		height: 150px;
+    	}
+
+		a {
+			strong {
+				line-height: 1.4rem;
+			}
+
+			span {
+				color: #e8e8e8;
+				letter-spacing: 0.3rem;
+			}
+
+			@include media-breakpoint-only(xl) {
+				strong {
+					line-height: 1.8rem;
+				}
+	    	}
+
+	    	@include media-breakpoint-only(lg) {
+	    		strong {
+	    			line-height: 1.8rem;
+	    		}
+	    	}
+
+	    	@include media-breakpoint-only(md) {
+	    		strong {
+	    			line-height: 1.8rem;
+	    		}
+	    	}
+
+	    	@include media-breakpoint-only(sm) {
+	    		strong {
+					line-height: 1.8rem;
+	    		}
+	    	}
+
+	    	@media (max-width: 363px) {
+	    		strong {
+					font-size: 1.6rem;
+	    		}
+	    		span {
+	    			font-size: 0.6rem;
+	    			letter-spacing: 0.2rem;
+	    		}
+	    	}
+		}
+	}
+
+	.sub-logo {
+
+		z-index: 1;
+		margin-bottom: 10px;
+
+		@include media-breakpoint-only(xl) {
+			margin-bottom: 15px;
+		}
+
+		@include media-breakpoint-only(lg) {
+			margin-bottom: 15px;
+			font-size: 1.1rem;
+		}
+
+		@media (max-width: 1054px){
+			max-width: 400px;
+			margin-bottom: 9px;
+		}
+
+		@media (max-width: 976px) {
+			max-width: 368px;
+		}
+
+		@media (max-width: 906px) {
+			max-width: 307px;
+		    font-size: 1.1rem;
+		}
+
+		@media (max-width: 852px) {
+			max-width: 255px;
+		    font-size: 1.1rem;
+		}
+
+		@media (max-width: 830px) {
+			max-width: 230px;
+		    font-size: 1rem;
+		}
+
+		@media (max-width: 800px) {
+			max-width: 192px;
+		    font-size: 0.8rem;
+		    margin-bottom: 13px;
+		}
+	}
+}
+
+@each $breakpoint in $breakpoints {
+    .text-#{$breakpoint}-nowrap {
+        @include media-breakpoint-up(#{$breakpoint}) {
+            white-space: nowrap;
+        }
+    }
+}
+
+@each $size in $width-sizes {
+
+    .w-#{str-replace($size, '%', '')} {
+        width: #{$size} !important;
+    }
+
+    .max-w-#{str-replace($size, '%', '')} {
+        max-width: #{$size} !important;
+    }
+
+    .min-w-#{str-replace($size, '%', '')} {
+        min-width: #{$size} !important;
+    }
+
+    .h-#{str-replace($size, '%', '')} {
+        height: #{$size} !important;
+    }
+
+    .max-h-#{str-replace($size, '%', '')} {
+        max-height: #{$size} !important;
+    }
+
+    .min-h-#{str-replace($size, '%', '')} {
+        min-height: #{$size} !important;
+    }
+
+    @each $breakpoint in $breakpoints {
+
+        .w-#{$breakpoint}-#{str-replace($size, '%', '')} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                width: #{$size} !important;
+            }
+        }
+
+        .max-w-#{$breakpoint}-#{str-replace($size, '%', '')} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                max-width: #{$size} !important;
+            }
+        }
+
+        .min-w-#{$breakpoint}-#{str-replace($size, '%', '')} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                min-width: #{$size} !important;
+            }
+        }
+
+        .h-#{$breakpoint}-#{str-replace($size, '%', '')} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                height: #{$size} !important;
+            }
+        }
+
+        .max-h-#{$breakpoint}-#{str-replace($size, '%', '')} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                max-height: #{$size} !important;
+            }
+        }
+
+        .min-h-#{$breakpoint}-#{str-replace($size, '%', '')} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                min-height: #{$size} !important;
+            }
+        }
+    }
+}
+
+@each $size in $font-sizes {
+    @each $side in $sides {
+        .p#{ str-slice($side, 0, 1) }-#{$size} {
+            padding-#{$side}: #{ str-replace($size, '-', '.') } !important;
+        }
+        .m#{ str-slice($side, 0, 1) }-#{$size} {
+            margin-#{$side}: #{ str-replace($size, '-', '.') } !important;
+        }
+        .m#{ str-slice($side, 0, 1) }--#{$size} {
+            margin-#{$side}: -#{ str-replace($size, '-', '.') } !important;
+        }
+    }
+    @each $breakpoint in $breakpoints {
+
+    	.font-size-only-#{$breakpoint}-#{$size} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                font-size: #{ str-replace($size, '-', '.') };
+            }
+        }
+
+        .font-size-#{$breakpoint}-#{$size} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                @if $size=='1-2rem' and $breakpoint=='md' {
+                    line-height: 1.67rem;
+                }
+                @else {
+
+                    @if $size=='3rem' {
+                        line-height: 3.5rem;
+                    }
+                    @else if $size=='2-2rem' {
+                        line-height: 2.6rem;
+                    }
+                    @else if $size=='3-7rem' {
+                        line-height: 4.2rem;
+                    }
+                    @else if $size=='2-6rem' {
+                        line-height: 2.4rem;
+                    }
+                    @else if $size=='2-5rem' {
+                        line-height: 2.8rem;
+                    }
+                    @else {
+                        line-height: #{ str-replace($size, '-', '.') };
+                    }
+                }
+                font-size: #{ str-replace($size, '-', '.') };
+            }
+        }
+
+        .line-height-#{$breakpoint}-#{$size} {
+            @include media-breakpoint-up(#{$breakpoint}) {
+                line-height: #{ str-replace($size, '-', '.') };
+            }
+        }
+    }
+
+    .font-size-#{$size} {
+        font-size: #{ str-replace($size, '-', '.') };
+        @if $size=='1-2rem' {
+            line-height: 1.67rem;
+        }
+        @else if $size=='2rem' {
+            line-height: 2.3rem;
+        }
+        @else if $size=='1-9rem' {
+            line-height: 2.3rem;
+        }
+        @else {
+            line-height: #{ str-replace($size, '-', '.') };
+        }
+    }
+
+    .font-size-only-#{$size} {
+        font-size: #{ str-replace($size, '-', '.') };
+    }
+
+    .line-height-#{$size} {
+        line-height: #{ str-replace($size, '-', '.') };
+    }
+}
+
+.bg-body{
+	background-color: $body-bg;
+	background: $body-bg;
+}
+
+.bg-main-jumbotron{
+	background-image: url('/images/jumbotron.png');
+}
+
+.bg-green-gradient{
+	background: rgb(18,97,3);
+	background: linear-gradient(90deg, rgba(18,97,3,1) 35%, rgba(78,133,5,1) 100%);
+}
+
+.border-radius-0{
+	border-radius: 0px !important;
+}
+
+.font-open-sans{
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+.font-weight-extra-bold{
+	font-weight: 900 !important;
+}
+
+.box-shadow{
+	box-shadow: 0 0 35px -10px #000 !important;
+}
+
+.max-w-100px{
+	max-width: 100px !important;
+}
+
+.min-w-100px{
+	min-width: 100px !important;
+}
+
+.max-h-100px{
+	max-height: 100px !important;
+}
+
+.min-h-300px{
+	min-height: 300px !important;
+}
+
+.max-h-300px{
+	max-height: 300px !important;
+}
+
+.mw-25{
+	max-width: 25% !important;
+}
+
+.mw-50{
+	max-width: 50% !important;
+}
+
+.mw-75{
+	max-width: 75% !important;
+}
+
+.text-decoration-line-through{
+	text-decoration: line-through !important;
+}
+
+#v-pills-customer-tabs{
+	.nav-link{
+		color: $nav-pills-link-active-bg;
+
+		&.active{
+			color: #fff;
+		}
+	}
+}

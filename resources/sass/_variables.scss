@@ -1,0 +1,180 @@
+// Body
+$body-bg: #ffffff;
+$body-color: #494949;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Dropdown
+$dropdown-border-radius: 0;
+$dropdown-spacer: 0;
+
+$input-bg: #fff;
+$input-font-size: 1.05rem;
+$input-border-color: #d6d6d6;
+$input-border-radius: 5px;
+
+$btn-border-radius: 5px;
+$btn-border-radius-sm: 5px;
+$btn-border-radius-lg: 8px;
+
+$border-radius-sm: 3px;
+$border-radius: 5px;
+$border-radius-lg: 8px;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #ad121a;
+$orange: #f6993f;
+$yellow: #f9b600;
+$green: #91c000;
+$green2: #79a558;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$grey: #383636;
+$grey-2: #818182;
+$highlight: $red;
+
+// Nav tabs
+$nav-pills-link-active-bg: #818182;
+
+// Theme
+$theme-colors: (
+  "highlight" : $red,
+  "white": #ffffff,
+  "black": #000000,
+  "lighter": #fbfbfb,
+  "secondary": #f1f1f1,
+  "secondary-2": #e2e2e2,
+  "secondary-3": #d6d6d6,
+  "secondary-4": #d0d0d0,
+  "secondary-5": #929292,
+  "secondary-6": #b7b7b7,
+  "secondary-9": #cdcdcd,
+  "grey": $grey,
+  "secondary-7": $grey-2,
+  "success" : $green,
+  "success-2": $green2,
+  'yellow' : $yellow,
+  'red' : $red
+);
+
+$pagination-hover-color: #fff;
+$pagination-hover-bg: $red;
+$pagination-hover-border-color: $red;
+$pagination-color: $red;
+$pagination-active-bg: $red;
+$pagination-active-border-color: $red;
+$pagination-border-color: $red;
+
+$container-max-widths: ( 
+    lg: 1280px
+);
+
+.rounded-xl {
+    border-radius: 0.4rem !important;
+}
+
+// Extra padding and margins
+$spaceamounts: (6, 7, 8, 9, 10, 11, 12);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space * 0.8}rem !important;
+    }
+  
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space * 0.8}rem !important;
+    }
+  }
+}
+
+@for $j from -3 through 12 {
+  @each $side in $sides {
+      .#{str-slice($side, 0, 1)}-#{$j} {
+          #{$side}: #{$j}rem !important;
+      }
+  }
+}
+
+@each $side in $sides {
+  .#{str-slice($side, 0, 1)}--1-2 {
+      #{$side}: -0.5rem !important;
+  }
+  .#{str-slice($side, 0, 1)}--1-4 {
+      #{$side}: -0.25rem !important;
+  }
+  .#{str-slice($side, 0, 1)}-1-2 {
+      #{$side}: 0.5rem !important;
+  }
+  .#{str-slice($side, 0, 1)}-1-4 {
+      #{$side}: 0.25rem !important;
+  }
+}
+
+$sides: ('top', 'right', 'bottom', 'left');
+$breakpoints: ('sm', 'md', 'lg', 'xl');
+
+$font-sizes: (
+    '0-2rem',
+    '0-8rem',
+    '0-7rem',
+    '0-9rem',
+    '1rem',
+    '1-1rem',
+    '1-2rem',
+    '1-3rem',
+    '1-35rem',
+    '1-5rem',
+    '1-6rem',
+    '1-7rem',
+    '1-75rem',
+    '1-8rem',
+    '2rem',
+    '2-1rem',
+    '2-2rem',
+    '2-4rem',
+    '2-5rem',
+    '2-6rem',
+    '2-8rem',
+    '2-9rem',
+    '3rem',
+    '3-2rem',
+    '3-5rem',
+    '3-7rem',
+    '3-8rem',
+    '3-9rem',
+    '4rem',
+    '5rem',
+    '5-3rem',
+    '5-8rem'
+);
+
+$width-sizes: (
+    '30px',
+    '50px',
+    '60px',
+    '70px',
+    '100px',
+    '120px',
+    '125px',
+    '150px',
+    '152px',
+    '170px',
+    '180px',
+    '182px',
+    '190px',
+    '200px',
+    '215px',
+    '280px',
+    '335px',
+    '420px',
+    '434px',
+);

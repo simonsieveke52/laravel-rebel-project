@@ -1,0 +1,40 @@
+.max-size{
+
+max-width: 170px !important;
+max-height: 170px !important;
+}
+
+.bg-grey-light{
+background-color: #FAFAFA;
+}
+
+.max-h-34{
+max-height: 34px !important;
+
+}
+.quote-listing {
+    .remove-form {
+        top: 0;
+        right: 0;
+    }
+}
+
+.bulk-price-table {
+    flex-direction: column;
+
+    .bulk-price-table__row {
+        .bulk-price-table__cell {
+            text-align: center;
+        }
+
+        .bulk-price-table__cell:nth-child(even) {
+            background-color:#F2F2F2;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .bulk-price-table {
+        flex-direction: row;
+    }
+}

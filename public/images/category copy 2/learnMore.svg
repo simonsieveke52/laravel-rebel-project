@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="66px" viewBox="0 0 76 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 62 (101010) - https://sketch.com -->
+    <title>C81E5D7A-F387-4CC7-9BD3-16AF0A36C4C5</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="19.8" cy="19.8" r="19.8"></circle>
+        <filter x="-88.4%" y="-63.1%" width="276.8%" height="276.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.42745098   0 0 0 0 0.447058824   0 0 0 0 0.470588235  0 0 0 0.101890297 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Ecommerce" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rebel-Smuggling-Home-Mobile" transform="translate(-330.000000, -791.000000)">
+            <g id="categories" transform="translate(10.000000, 469.000000)">
+                <g id="category" transform="translate(0.000000, 214.000000)">
+                    <g id="learn-more" transform="translate(339.900000, 117.150000)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <g transform="translate(11.550000, 14.025000)" stroke="#BD2434" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.825">
+                            <line x1="0.4125" y1="6.1875" x2="15.2876497" y2="6.1875" id="Line"></line>
+                            <line x1="16.0875" y1="6.1875" x2="10.3125" y2="0.4125" id="Line-4"></line>
+                            <line x1="16.0875" y1="6.1875" x2="10.3125" y2="11.1375" id="Line-5"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

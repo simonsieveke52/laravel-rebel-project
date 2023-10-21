@@ -1,0 +1,25 @@
+{
+    "name": "fme/google-adwords",
+    "description": "Google Adwords API",
+    "type": "library",
+    "require": {
+        "googleads/googleads-php-lib": "^48.0"
+    },
+    "minimum-stability": "dev",
+    "authors": [{
+        "name": "Fountainheadme",
+        "email": "fme.test.acc@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "FME\\GoogleAdwords\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FME\\GoogleAdwords\\GoogleAdwordsServiceProvider"
+            ]
+        }
+    }
+}

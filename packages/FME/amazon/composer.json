@@ -1,0 +1,53 @@
+{
+    "name": "fme/amazon",
+    "description": "Amazon MWS wrapper",
+    "keywords": [
+        "Amazon"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FountainheadME",
+            "email": "nor15dine@gmail.com",
+            "homepage": "https://FountainheadME.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "~6.3",
+        "spatie/array-to-xml": "^2.1",
+        "league/csv": "^9.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FME\\Amazon\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FME\\Amazon\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FME\\Amazon\\AmazonServiceProvider"
+            ],
+            "aliases": {
+                "AmazonRepository": "FME\\Amazon\\AmazonFacade"
+            }
+        }
+    },
+    "prefer-stable": false
+}

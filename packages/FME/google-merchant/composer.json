@@ -1,0 +1,25 @@
+{
+    "name": "fme/google-merchant",
+    "description": "Google merchant api",
+    "type": "library",
+    "require": {
+        "google/apiclient": "^2.2"
+    },
+    "minimum-stability": "dev",
+    "authors": [{
+        "name": "Fountainheadme",
+        "email": "fme.test.acc@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "FME\\GoogleMerchant\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FME\\GoogleMerchant\\GoogleMerchantServiceProvider"
+            ]
+        }
+    }
+}
